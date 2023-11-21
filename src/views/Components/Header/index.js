@@ -1,10 +1,11 @@
 import React from 'react'
+
 import * as S from './styles'
 
 import logo from '../../../assets/Logo/logo.png'
 import bell from '../../../assets/Web/bell.png'
 
-function Header() {
+function Header({lateCount, clickNotifica}) {
   return (
     <S.Container>
       <S.LeftSide>
@@ -20,10 +21,10 @@ function Header() {
         <a href="#">SINCRONIZAR CELULAR</a>
 
         <span className="dividir" />
-        <a href="#" id="notification">
-          <img src={bell} alt="Imagem Notificação" />
-          <span>5</span>
-        </a>
+        <button onClick={clickNotifica} href="#" id="notification">
+          <img src={bell} alt="Imagem de Notificação" />
+          <span>{lateCount}</span>
+        </button>
       </S.RightSide>
     </S.Container>
   )

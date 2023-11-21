@@ -37,5 +37,6 @@ export const Title = styled.div`
     top: 30px;
     background: #fff;
     padding: 0 20px;
+    letter-spacing: 7px;
   }
 `
